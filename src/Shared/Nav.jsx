@@ -14,6 +14,7 @@ const Nav = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to={"/"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Home</NavLink></li>
+                        <li><NavLink to={"/all-products"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>All Products</NavLink></li>
                         <li><NavLink to={'/blog'} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Blog</NavLink></li>
                         <li><NavLink to={'/about'} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>About</NavLink></li>
                         <li><NavLink to={'/contact'} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Contact</NavLink></li>
@@ -23,7 +24,10 @@ const Nav = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><NavLink to={"/"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Home</NavLink></li>             
+                    <li><NavLink to={"/"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Home</NavLink></li>
+                    <li><NavLink to={"/all-products"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>All Products</NavLink></li>             
+                    <li><NavLink to={"/my-toy"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>My Toy</NavLink></li>             
+                    <li><NavLink to={"/add-products"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Add Products</NavLink></li>             
                     <li><NavLink to={"/blog"} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Blog</NavLink></li>
                     <li><NavLink to={'/about'} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>About</NavLink></li>
                     <li><NavLink to={'/contact'} className={({isActive})=>(isActive ? 'bg-slate-200': 'default')}>Contact</NavLink></li>
