@@ -4,41 +4,66 @@ import Card from './Card/Card';
 import { useEffect, useState } from 'react';
 
 const ShopCards = () => {
+    const [tabValue, setTabValue] = useState('all')
     const [products, setProducts] = useState([])
-    useEffect(()=>{
-        fetch(`http://localhost:5000/toy-products`)
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    },[]);
+    useEffect(() => {
+        fetch(`http://localhost:5000/toy/${tabValue}`)
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [tabValue]);
     console.log(products)
     return (
         <div className="py-20">
-            <Tabs>
-            <TabList>
-                <Tab>Title 1</Tab>
-                <Tab>Title 2</Tab>
-                <Tab>Title 3</Tab>
-            </TabList>
+            <Tabs >
+                <TabList >
+                    <Tab onClick={() => setTabValue('all')}>All Toys</Tab>
+                    <Tab onClick={() => setTabValue('science')}>Science Toys</Tab>
+                    <Tab onClick={() => setTabValue('language')}>Language Toys</Tab>
+                    <Tab onClick={() => setTabValue('maths')}>Math Toys</Tab>
 
-            <TabPanel className='py-8'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                {
-                    products.map(service => <Card
-                        key={service._id}
-                        service={service}
-                    ></Card>)
-                }
-                    
-                </div>
-                
-            </TabPanel>
-            <TabPanel>
-                <h2>Any content 2</h2>
-            </TabPanel>
-            <TabPanel>
-                <h2>Any content 3</h2>
-            </TabPanel>
-        </Tabs>
+                </TabList>
+
+                <TabPanel className='py-8'>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        {
+                            products.map(product => <Card
+                                key={product._id}
+                                product={product}
+                            ></Card>)
+                        }
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        {
+                            products.map(product => <Card
+                                key={product._id}
+                                product={product}
+                            ></Card>)
+                        }
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        {
+                            products.map(product => <Card
+                                key={product._id}
+                                product={product}
+                            ></Card>)
+                        }
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                        {
+                            products.map(product => <Card
+                                key={product._id}
+                                product={product}
+                            ></Card>)
+                        }
+                    </div>
+                </TabPanel>
+            </Tabs>
         </div>
     );
 };

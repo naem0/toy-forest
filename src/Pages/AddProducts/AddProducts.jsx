@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Authprovider";
 
 
 const AddProducts = () => {
+    const {user, loading}= useContext(AuthContext);
+    if (loading) {
+        return <progress className="progress w-56"></progress>
+    }
     const handleAddToy = event => {
         event.preventDefault();
 
@@ -21,7 +27,7 @@ const AddProducts = () => {
         console.log(newToys)
 
         // send data to the server
-        fetch('http://localhost:5000/toy-products', {
+        fetch('https://toy-marketplace-server-pi.vercel.app/toy-products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +51,7 @@ const AddProducts = () => {
     return (
         <div>
             <div className="bg-[#F4F3F0] lg:p-24 p-12">
-                <h2 className="text-3xl font-extrabold mb-8 text-center">Add a toy</h2>
+                <h2 className="text-3xl font-extrabold mb-8 text-center text-cyan-400">Add a toy</h2>
                 <form onSubmit={handleAddToy} className="">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="form-control">
@@ -69,7 +75,7 @@ const AddProducts = () => {
                                 <span className="label-text">Seller Name</span>
                             </label>
                             <label className="">
-                                <input type="text" name="seller" placeholder="Seller Name" className="input input-bordered w-full" />
+                                <input type="text" name="seller" defaultValue={user?.displayName} placeholder="Seller Name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control ">
@@ -77,7 +83,7 @@ const AddProducts = () => {
                                 <span className="label-text">Seller Email</span>
                             </label>
                             <label className="">
-                                <input type="text" name="email" placeholder="Seller Email" className="input input-bordered w-full" />
+                                <input type="text" name="email" defaultValue={user?.email} placeholder="Seller Email" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control">
@@ -93,7 +99,7 @@ const AddProducts = () => {
                                 <span className="label-text">Rating</span>
                             </label>
                             <label className="">
-                                <input type="number" name="taste" placeholder="Rating" className="input input-bordered w-full" />
+                                <input type="number" name="rating" placeholder="Rating" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control">

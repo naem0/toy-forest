@@ -7,6 +7,7 @@ import Signup from "../Pages/Login/Signup/Signup";
 import MyToy from "../Pages/MyToy/MyToy";
 import AllProducts from "../Pages/AllProducts/AllProducts";
 import AddProducts from "../Pages/AddProducts/AddProducts";
+import PraivatRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/my-toy',
-          element: <MyToy></MyToy>
+          element: <PraivatRoute><MyToy></MyToy></PraivatRoute>
         },
         {
           path: '/all-products',
@@ -40,9 +41,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/add-products',
-          element: <AddProducts></AddProducts>
-        }
-        
+          element: <PraivatRoute><AddProducts></AddProducts></PraivatRoute>
+        },
 
       ]
     },
