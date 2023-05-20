@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="-mt-60 pt-64 pb-16 shadow-xl" style={{
+        <div className="-mt-60 pt-64 pb-16 shadow-xl -m-4" style={{
             backgroundImage: `url('https://c0.wallpaperflare.com/preview/265/849/245/toys.jpg')`,
             // backgroundImage: `url(${externalImage})`,
             backgroundSize: 'cover',

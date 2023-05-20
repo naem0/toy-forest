@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
@@ -29,7 +30,7 @@ const Product = ({ product }) => {
             <td> {quantity}</td>
             <td> {rating}</td>
             <th>
-                <button className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">View Details</button>
+                <Link to={`/toy-details/${_id}`}><button className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">View Details</button></Link>
             </th>
         </tr>
 

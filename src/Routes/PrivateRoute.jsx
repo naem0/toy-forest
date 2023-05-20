@@ -2,6 +2,7 @@
 import { useContext } from 'react'; 
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../Authprovider';
+import Swal from 'sweetalert2';
 
 // PraivatRoute
 
@@ -18,6 +19,9 @@ const PraivatRoute = ({children}) => {
     if (user) {
         return children;
     }
+    Swal.fire(
+        'You have to login first',
+      )
     return <Navigate state={{from: location}} to='/login'></Navigate>
 };
 
