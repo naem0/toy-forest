@@ -8,7 +8,7 @@ const Card = ({product}) => {
     return (
         <div>
             <div className="card card-compact bg-base-100 shadow-lg hover:border-2 hover:shadow-none">
-                <figure className="w-3/4 mx-auto"><img src={photo} alt="toy" /></figure>
+                <figure className="w-3/4 mx-auto p-4"><img src={photo} alt="toy" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-xl text-slate-600">{name}</h2>
                     <h3 className='font-bold text-2xl text-cyan-400'>${price}</h3>
