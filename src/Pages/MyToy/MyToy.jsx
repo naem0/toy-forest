@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Authprovider";
 import MyToyTR from "./MyToyTR/MyToyTR";
+import usetitle from "../../component/useTitle";
 
 
 const MyToy = () => {
+    usetitle('My Toy')
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
-    const url = `https://toy-marketplace-server-pi.vercel.app/my-toy?email=${user?.email}`
+    const url = `http://localhost:5000/my-toy?email=${user?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

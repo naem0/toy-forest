@@ -9,6 +9,7 @@ import AllProducts from "../Pages/AllProducts/AllProducts";
 import AddProducts from "../Pages/AddProducts/AddProducts";
 import PraivatRoute from "./PrivateRoute";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import UpdatToy from "../Pages/UpdatToy/UpdatToy";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
         {
           path: '/toy-details/:id',
           element: <PraivatRoute><ToyDetails></ToyDetails></PraivatRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/toy-products/${params.id}`)
+        },
+        {
+          path: '/updat-toy/:id',
+          element: <PraivatRoute><UpdatToy></UpdatToy></PraivatRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/toy-products/${params.id}`)
         },
 

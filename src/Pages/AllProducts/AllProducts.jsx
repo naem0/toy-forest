@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Product from "./Product/Product";
+import usetitle from "../../component/useTitle";
 
 
 const AllProducts = () => {
     const [products, setProducts]=useState([])
     const [serchText, setSerchText]=useState('')
+    usetitle('All Products')
     useEffect(() => {
         fetch(`http://localhost:5000/toy-products`)
             .then(res => res.json())

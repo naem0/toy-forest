@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import UpdatToy from "./UpdatToy/UpdatToy";
 
 
 // eslint-disable-next-line react/prop-types
 const MyToyTR = ({ myToy, setMyToys, myToys }) => {
     // eslint-disable-next-line react/prop-types
     const { _id, price, name, subcategory, photo, quantity } = myToy;
+    console.log(_id)
     const handleDelete = _id => {
+
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -29,18 +31,18 @@ const MyToyTR = ({ myToy, setMyToys, myToys }) => {
                                 'Your file has been deleted.',
                                 'success'
                             )
+
+                            // eslint-disable-next-line react/prop-types
+                            const remening = myToys.filter(toy => toy._id !== _id)
+                            setMyToys(remening)
                         }
-                        // eslint-disable-next-line react/prop-types
-                        const remening = myToys.filter(toy => toy._id !== _id)
-                        setMyToys(remening)
+
                     })
 
             }
         })
     }
-    const hendlupdat= ()=>{
-        return <UpdatToy myToy={myToy}></UpdatToy>
-    }
+
     return (
         <tr>
             <th>
@@ -65,8 +67,9 @@ const MyToyTR = ({ myToy, setMyToys, myToys }) => {
             <td>$ {price}</td>
             <td> {quantity}</td>
             <th>
-                <label onClick={hendlupdat} htmlFor="my-modal-6" className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">Edit</label>
-                
+                <Link to={`/updat-toy/${_id}`}>
+                    <   label className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">Edit</label>
+                </Link>
             </th>
 
         </tr>

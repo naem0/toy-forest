@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
             <footer
             style={{
-                backgroundImage: `url('https://media.istockphoto.com/id/1442386384/vector/christmas-banner-with-copy-space-santa-claus-in-a-snowy-forest-carries-gifts-to-children.jpg?s=612x612&w=0&k=20&c=8eCSjsH8NPB1xaqnNjfpUGE3VykxhJtZXSh14F8WW8Q=')`,
+                backgroundImage: `url('https://media.istockphoto.com/id/1331826146/photo/baby-kids-toys-on-light-blue-background-colorful-educational-wooden-and-musical-toys-top-view.jpg?s=612x612&w=0&k=20&c=4KOVAMoAoBF4OoptZc-GMuyD8VYpuPegVAYCdFY41jk=')`,
                 // backgroundImage: `url(${externalImage})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
