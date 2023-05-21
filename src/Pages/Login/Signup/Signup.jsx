@@ -80,7 +80,7 @@ const Signup = () => {
                                             <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
                                         </div>
                                         <div className="relative my-4">
-                                            <input id="password" required  name="password" type="password" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+                                            <input id="password" required name="password" type="password" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
                                             <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
                                         </div>
                                         <div className="relative my-4">
@@ -92,8 +92,8 @@ const Signup = () => {
                                             <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Photo URL</label>
                                         </div>
                                         <label className="label">
-                                <Link state={{ from: location.state }} to={'/login'} className="label-text-alt link link-hover">already have an account? Go to login. </Link>
-                            </label>
+                                            <Link state={{ from: location.state }} to={'/login'} className="label-text-alt link link-hover">already have an account? Go to login. </Link>
+                                        </label>
                                         <p><small className='text-red-400'>{error}</small></p>
                                         <div className="relative">
                                             <button className="bg-blue-500 w-full text-white rounded-md  py-2">Register</button>
