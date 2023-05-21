@@ -6,44 +6,46 @@ const Blog = () => {
     return (
         <div className="p-4 w-full md:w-3/4 lg:w-2/3 mx-auto mb-16">
             <h1 className="font-bold text-4xl text-center text-slate-700">Blog</h1>
-           <div className=" mt-12">
+            <div className=" mt-12">
                 <h1 className='font-medium text-2xl mb-4'>
-                    Tell us the differences between uncontrolled and controlled components.
+                    What is an access token and refresh token? How do they work and where should we store them on the client-side?
                 </h1>
                 <p className='text-slate-500'>
 
-                    Uncontrolled components handle their own internal state and dont receive outside control. They are simpler and used for basic UI elements like input fields and buttons.
+                    Access token: Credential granting access to resources/services on behalf of a user.
 
-                    Controlled components, on the other hand, are controlled by an external source, like a framework or state management system. They handle more complex UI interactions and display data, receiving outside control and management.
+                    Refresh token: Credential used to obtain a new access token without reauthentication.
+
+                    Store on client-side: Securely store in cookies or browser storage mechanisms.
                 </p>
             </div>
             <div className="mt-12">
                 <h1 className='font-medium text-2xl mb-4'>
-                    How to validate React props using PropTypes.
+                    Compare SQL and NoSQL databases?
                 </h1>
                 <p className='text-slate-500'>
 
-                    PropTypes is a package in React that allows you to check the data types of the props passed to a component. You can use it to make sure that your component receives the right type of data, and it will log a warning if a prop is not the correct type. To use it, you need to install it, import it, define the props for your component, and add the PropTypes validation for each prop.
+                    SQL databases: Relational, structured tables, predefined schemas, data consistency, enforce relationships.
+
+                    NoSQL databases: Non-relational, flexible formats (key-value, document, columnar, graph), high scalability, performance, flexible schema, handle unstructured data.
                 </p>
             </div>
             <div className="mt-12">
                 <h1 className='font-medium text-2xl mb-4'>
-                    Tell us the difference between nodejs and express js.
+                    What is express js? What is Nest JS?
                 </h1>
                 <p className='text-slate-500'>
-
-                    Node.js is a runtime environment that allows you to run JavaScript on the server-side, while Express.js is a web application framework that is built on top of Node.js and provides additional tools and features for building web applications. In simpler terms, Node.js is the foundation, while Express.js is an additional layer that makes it easier to build web applications using Node.js.
+                    Express.js is a minimalistic and flexible web application framework for Node.js. It provides a set of features and utilities to build web applications and APIs easily. With Express.js, developers can handle routes, HTTP requests and responses, middleware, and other common web application functionalities.
                 </p>
             </div>
             <div className="mt-12">
                 <h1 className='font-medium text-2xl mb-4'>
-                    What is a custom hook, and why will you create a custom hook?
+                    What is MongoDB aggregate and how does it work?
                 </h1>
                 <p className='text-slate-500'>
-
-                    A custom hook is a reusable JavaScript function in React that uses built-in React hooks and/or other custom hooks to encapsulate complex logic and state management. You would create a custom hook to extract commonly used functionality or state management logic from a component and reuse it across multiple components, making your code more modular and reusable. Custom hooks are especially useful when you want to share stateful logic between different components that are not necessarily related to each other in the component hierarchy.
+                    MongoDB aggregate: Performs data aggregation and analysis using a pipeline of stages. Each stage processes documents and passes the result to the next stage. Stages include filtering, grouping, projecting, sorting, limiting, and joining. Enables complex data transformations and calculations.
                 </p>
-            </div> 
+            </div>
         </div>
     );
 };

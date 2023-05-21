@@ -3,6 +3,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Authprovider';
 import usetitle from '../../../component/useTitle';
+import bg from '../../../assets/3d-cartoon-background-children3.jpg'
 
 const Signup = () => {
     usetitle('Sign Up')
@@ -54,7 +55,7 @@ const Signup = () => {
     return (
         // Register Component 
         <div style={{
-            backgroundImage: `url('https://media.istockphoto.com/id/1442386384/vector/christmas-banner-with-copy-space-santa-claus-in-a-snowy-forest-carries-gifts-to-children.jpg?s=612x612&w=0&k=20&c=8eCSjsH8NPB1xaqnNjfpUGE3VykxhJtZXSh14F8WW8Q=')`,
+            backgroundImage: `url(${bg})`,
             // backgroundImage: `url(${externalImage})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -75,11 +76,11 @@ const Signup = () => {
                                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                     <form onSubmit={hendalRegister}>
                                         <div className="relative">
-                                            <input id="email" name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
+                                            <input id="email" required name="email" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Email address" />
                                             <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
                                         </div>
                                         <div className="relative my-4">
-                                            <input id="password" name="password" type="password" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+                                            <input id="password"  name="password" type="password" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
                                             <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
                                         </div>
                                         <div className="relative my-4">

@@ -1,12 +1,17 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import usetitle from "../../component/useTitle";
 import { Rating } from "@smastrom/react-rating";
 
 
 const ToyDetails = () => {
-
+    
     const data = useLoaderData();
     console.log(data)
+    const navigation = useNavigation();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     const { price, name, subcategory, photo, quantity, details, sellerName, sellerEmail, rating } = data;
     usetitle(`Toy Details - ${name}`)
     return (

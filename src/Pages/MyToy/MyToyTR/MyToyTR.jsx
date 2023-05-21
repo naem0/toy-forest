@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -7,6 +7,11 @@ const MyToyTR = ({ myToy, setMyToys, myToys }) => {
     // eslint-disable-next-line react/prop-types
     const { _id, price, name, subcategory, photo, quantity } = myToy;
     console.log(_id)
+    const navigation = useNavigation();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     const handleDelete = _id => {
 
         Swal.fire({

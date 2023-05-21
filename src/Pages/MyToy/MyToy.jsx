@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Authprovider";
 import MyToyTR from "./MyToyTR/MyToyTR";
 import usetitle from "../../component/useTitle";
+import { useNavigation } from "react-router-dom";
 
 
 const MyToy = () => {
@@ -16,6 +17,11 @@ const MyToy = () => {
                 setMyToys(data)
             })
     }, [url])
+    const navigation = useNavigation();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     return (
         <div>
             <div className="overflow-x-auto w-full">

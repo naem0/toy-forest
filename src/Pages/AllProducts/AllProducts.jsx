@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import Product from "./Product/Product";
 import usetitle from "../../component/useTitle";
+import { useNavigation } from "react-router-dom";
 
 
 const AllProducts = () => {
     const [products, setProducts]=useState([])
     const [serchText, setSerchText]=useState('')
+    const navigation = useNavigation();
+    console.log(navigation.state)
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     usetitle('All Products')
     useEffect(() => {
         fetch(`https://toy-marketplace-server-pi.vercel.app/toy-products`)
