@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Authprovider";
 import { useLoaderData } from "react-router-dom";
 import usetitle from "../../component/useTitle";
+import bg from '../../assets/3d-cartoon-background-children3.jpg'
 
 
 const UpdatToy = () => {
@@ -53,9 +54,17 @@ const UpdatToy = () => {
             })
     }
     return (
-        <div className="-mx-4">
-            <div className="bg-[#F4F3F0] lg:p-24 p-12">
-                <h2 className="text-3xl font-extrabold mb-8 text-center text-cyan-400">Add a toy</h2>
+        <div
+        style={{
+            backgroundImage: `url(${bg})`,
+            // backgroundImage: `url(${externalImage})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            height: 'full'
+        }} className="-mx-4">
+            <div className=" lg:p-24 p-12">
+                <h2 className="text-3xl font-extrabold mb-8 text-center text-slate-600">Updat Toy: {name}</h2>
                 <form onSubmit={handleUpdatToy} className="">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="form-control">
@@ -120,7 +129,7 @@ const UpdatToy = () => {
                             <input type="text" defaultValue={details} name="details" placeholder="Details" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <button className="btn bg-cyan-400 hover:bg-cyan-500 btn-block border-0 mt-12" >Add Toy</button>
+                    <button className="btn bg-cyan-600 hover:bg-cyan-700 btn-block border-0 mt-12" >Updat Toy</button>
                     {/* <input type="submit" value="Add Toy" className="btn btn-block" /> */}
                 </form>
             </div>

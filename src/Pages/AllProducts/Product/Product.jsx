@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Product = ({ product }) => {
+    console.log(product)
     // eslint-disable-next-line react/prop-types
     const { _id, price, name, subcategory, photo, quantity, sellerName, sellerEmail, rating } = product;
     return (
 
-        <tr>
+        <tr
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">

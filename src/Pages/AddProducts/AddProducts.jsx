@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Authprovider";
 import usetitle from "../../component/useTitle";
+import bg from '../../assets/3d-cartoon-background-children.jpg'
 
 
 const AddProducts = () => {
@@ -52,7 +53,7 @@ const AddProducts = () => {
     }
     return (
         <div style={{
-            backgroundImage: `url('https://media.istockphoto.com/id/1203607828/photo/soft-english-letters-and-numbers-with-school-and-office-supplies-on-blue-background-back-to.jpg?s=612x612&w=0&k=20&c=_vkXFPOpPEW6a-4kJ2lRmXti_n35sXLJEiWb942jr-8=')`,
+            backgroundImage: `url(${bg})`,
             // backgroundImage: `url(${externalImage})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -141,7 +142,7 @@ const AddProducts = () => {
                             <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <button className="btn bg-cyan-400 hover:bg-cyan-500 btn-block border-0 mt-12" >Add Toy</button>
+                    <button className="btn bg-cyan-500 hover:bg-cyan-600 btn-block border-0 mt-12" >Add Toy</button>
                     {/* <input type="submit" value="Add Toy" className="btn btn-block" /> */}
                 </form>
             </div>

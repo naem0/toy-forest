@@ -44,7 +44,10 @@ const MyToyTR = ({ myToy, setMyToys, myToys }) => {
     }
 
     return (
-        <tr>
+        <tr
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
             <th>
                 <button onClick={() => handleDelete(_id)} className="btn btn-circle btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
