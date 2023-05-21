@@ -11,10 +11,7 @@ const Gallery = () => {
                 </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="grid gap-4"
-                    data-aos="fade-right"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
+                <div className="grid gap-4">
 
                     <div >
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1419542422/photo/wooden-abacus-or-abakan-educational-toy-for-children-multicolored-wooden-abacus.jpg?s=612x612&w=0&k=20&c=RLfLcGwFJ28rKg_R6n7mIYPDl6-hTjQdVNO3i7Nckbw=" alt="" />
@@ -26,10 +23,7 @@ const Gallery = () => {
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1144517898/photo/math-number-colorful-on-white-background-education-study-mathematics-learning-teach-concept.jpg?s=612x612&w=0&k=20&c=h0R2FxkQ4OsMZK7WyzLHwCPuiNzboepyw5UA7ugFHN4=" alt="" />
                     </div>
                 </div>
-                <div className="grid gap-4"
-                    data-aos="fade-right"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="3000">
+                <div className="grid gap-4">
                     <div>
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1358926779/photo/child-playing-with-mathematical-toy.jpg?s=612x612&w=0&k=20&c=NSnutdea7YONE7Tl6Ii1ohXr42CixubIkDbKfPHRalU=" alt="" />
                     </div>
@@ -40,10 +34,7 @@ const Gallery = () => {
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1331826177/photo/baby-kids-toys-wooden-train-car-colorful-blocks-and-balls-on-yellow-background-top-view-flat.jpg?s=612x612&w=0&k=20&c=WNpdFTRNueNd9A5XYUg6SQ1efkzb6zMfT8xek28RVgk=" alt="" />
                     </div>
                 </div>
-                <div className="grid gap-4"
-                    data-aos="fade-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="3000">
+                <div className="grid gap-4">
                     <div>
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1431737428/photo/set-of-colorful-educational-toys-for-baby-brain-training-cognitive-skills-flat-lay-top-view.jpg?s=612x612&w=0&k=20&c=S2PGQNaZMlvk6_p5WoPQJ743DtKrAy3_EYVIGbRMW-0=" alt="" />
                     </div>
@@ -54,10 +45,7 @@ const Gallery = () => {
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1273835107/photo/wooden-toys-on-yellow-background-still-life.jpg?s=612x612&w=0&k=20&c=rJfB6xe93ABWkmQ6IUyAckNJVvha-iwQS6Wz8VPERY0=" alt="" />
                     </div>
                 </div>
-                <div className="grid gap-4"
-                    data-aos="fade-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
+                <div className="grid gap-4">
                     <div>
                         <img className="h-auto max-w-full rounded-lg" src="https://media.istockphoto.com/id/1397683801/photo/child-is-playing-with-colorful-wooden-and-plastic-toys-on-pink-background.jpg?s=612x612&w=0&k=20&c=xYfD6L2S9FJGZLfoPLZObxFd-woLMEWdkriZhEUszKM=" alt="" />
                     </div>
