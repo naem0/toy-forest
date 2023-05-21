@@ -9,9 +9,7 @@ const AllProducts = () => {
     const [serchText, setSerchText]=useState('')
     const navigation = useNavigation();
     console.log(navigation.state)
-    if (navigation.state == 'loading') {
-        return <progress className="progress w-56 mx-auto"></progress>
-    }
+    
     usetitle('All Products')
     useEffect(() => {
         fetch(`https://toy-marketplace-server-pi.vercel.app/toy-products`)
@@ -24,7 +22,9 @@ const AllProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }
-
+    if (navigation.state == 'loading') {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
     return (
         <div>
             <div className="text-center my-8 flex justify-center align-middle">

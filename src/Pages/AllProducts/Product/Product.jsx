@@ -33,9 +33,9 @@ const Product = ({ product }) => {
             </td>
             <td>$ {price}</td>
             <td> {quantity}</td>
-            <td> <div className="flex gap-2">
-                <Rating style={{ maxWidth: 80 }} value={rating} readOnly />
-                <p className="text-slate-600 text-xs">{rating}</p>
+            <td> <div className="">
+                <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
+                
             </div></td>
             <th>
                 <Link to={`/toy-details/${_id}`}><button className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">View Details</button></Link>
