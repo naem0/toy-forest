@@ -52,12 +52,12 @@ const router = createBrowserRouter([
         {
           path: '/toy-details/:id',
           element: <PraivatRoute><ToyDetails></ToyDetails></PraivatRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toy-products/${params.id}`)
+          loader: ({params}) => fetch(`https://toy-marketplace-server-pi.vercel.app/toy-products/${params.id}`)
         },
         {
           path: '/updat-toy/:id',
           element: <PraivatRoute><UpdatToy></UpdatToy></PraivatRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toy-products/${params.id}`)
+          loader: ({params}) => fetch(`https://toy-marketplace-server-pi.vercel.app/toy-products/${params.id}`)
         },
         {
           path: '/about',

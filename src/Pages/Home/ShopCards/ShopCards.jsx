@@ -7,7 +7,7 @@ const ShopCards = () => {
     const [tabValue, setTabValue] = useState('all')
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/toy/${tabValue}`)
+        fetch(`https://toy-marketplace-server-pi.vercel.app/toy/${tabValue}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [tabValue]);

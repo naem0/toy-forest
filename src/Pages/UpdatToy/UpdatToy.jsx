@@ -31,7 +31,7 @@ const UpdatToy = () => {
         const updatToys = { name, quantity, subcategory, rating, price, details, photo }
 
         // send data to the server
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-marketplace-server-pi.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

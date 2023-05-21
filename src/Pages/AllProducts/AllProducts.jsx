@@ -8,13 +8,13 @@ const AllProducts = () => {
     const [serchText, setSerchText]=useState('')
     usetitle('All Products')
     useEffect(() => {
-        fetch(`http://localhost:5000/toy-products`)
+        fetch(`https://toy-marketplace-server-pi.vercel.app/toy-products`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     
     const hendeleSerch=()=>{
-        fetch(`http://localhost:5000/toy-serch/${serchText}`)
+        fetch(`https://toy-marketplace-server-pi.vercel.app/toy-serch/${serchText}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }

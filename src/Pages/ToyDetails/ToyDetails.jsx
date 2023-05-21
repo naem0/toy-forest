@@ -6,6 +6,7 @@ import { Rating } from "@smastrom/react-rating";
 const ToyDetails = () => {
 
     const data = useLoaderData();
+    console.log(data)
     const { price, name, subcategory, photo, quantity, details, sellerName, sellerEmail, rating } = data;
     usetitle(`Toy Details - ${name}`)
     return (
