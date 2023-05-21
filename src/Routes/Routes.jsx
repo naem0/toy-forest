@@ -11,6 +11,8 @@ import PraivatRoute from "./PrivateRoute";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import UpdatToy from "../Pages/UpdatToy/UpdatToy";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -57,7 +59,14 @@ const router = createBrowserRouter([
           element: <PraivatRoute><UpdatToy></UpdatToy></PraivatRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/toy-products/${params.id}`)
         },
-
+        {
+          path: '/about',
+          element: <About></About>
+        },
+        {
+          path: '/contact',
+          element: <Contact></Contact>
+        },
       ]
     },
   ]);

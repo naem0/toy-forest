@@ -12,7 +12,7 @@ const Footer = () => {
             data-aos="fade-up"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
-            className="text-center text-white">
+            className="text-center text-white -mx-4">
 
             <footer style={{
                 backgroundImage: `url(${bgfooter})`,

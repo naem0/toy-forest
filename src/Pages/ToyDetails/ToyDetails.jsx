@@ -1,9 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import usetitle from "../../component/useTitle";
+import { Rating } from "@smastrom/react-rating";
 
 
 const ToyDetails = () => {
-    
+
     const data = useLoaderData();
     const { price, name, subcategory, photo, quantity, details, sellerName, sellerEmail, rating } = data;
     usetitle(`Toy Details - ${name}`)
@@ -13,7 +14,10 @@ const ToyDetails = () => {
                 <img src={photo} alt="" />
             </div>
             <div>
-                <div className="text-end me-10">{rating}</div>
+                <div className="flex gap-2">
+                    <Rating style={{ maxWidth: 80 }} value={rating} readOnly />
+                    <p className="text-slate-600 text-xs">{rating}</p>
+                </div>
                 <h2 className="font-bold text-4xl text-slate-600 my-4">{name}</h2>
                 <span className="bg-slate-100 text-sm text-slate-500 px-3 py-1 rounded-lg">Category: {subcategory}</span>
                 <p className=" text-slate-500 my-5">{details}</p>
@@ -24,7 +28,6 @@ const ToyDetails = () => {
                     <p className="mt-4 text-slate-500">Email: {sellerEmail}</p>
                 </div>
             </div>
-            
         </div>
     );
 };

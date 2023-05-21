@@ -61,7 +61,7 @@ const AddProducts = () => {
             height: 'full'
         }} className="-mx-4 md:mx-0">
             <div className=" lg:p-24 p-12">
-                <h2 className="text-3xl font-extrabold mb-8 text-center text-slate-600">Add a toy</h2>
+                <h2 className="text-3xl font-extrabold mb-8 text-center text-white">Add a toy</h2>
                 <form onSubmit={handleAddToy} className="">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="form-control">
@@ -101,7 +101,7 @@ const AddProducts = () => {
                                 <span className="label-text">Price</span>
                             </label>
                             <label className="">
-                                <input type="number" name="price" placeholder="price" className="input input-bordered w-full" />
+                                <input type="text" name="price" placeholder="price" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control ">
@@ -109,7 +109,7 @@ const AddProducts = () => {
                                 <span className="label-text">Rating</span>
                             </label>
                             <label className="">
-                                <input type="number" name="rating" placeholder="Rating" className="input input-bordered w-full" />
+                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control">
@@ -142,7 +142,7 @@ const AddProducts = () => {
                             <input type="text" name="details" placeholder="Details" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <button className="btn bg-cyan-500 hover:bg-cyan-600 btn-block border-0 mt-12" >Add Toy</button>
+                    <button className="btn bg-cyan-600 hover:bg-cyan-700 btn-block border-0 mt-12" >Add Toy</button>
                     {/* <input type="submit" value="Add Toy" className="btn btn-block" /> */}
                 </form>
             </div>

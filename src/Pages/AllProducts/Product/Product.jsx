@@ -1,3 +1,4 @@
+import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 
@@ -32,7 +33,10 @@ const Product = ({ product }) => {
             </td>
             <td>$ {price}</td>
             <td> {quantity}</td>
-            <td> {rating}</td>
+            <td> <div className="flex gap-2">
+                <Rating style={{ maxWidth: 80 }} value={rating} readOnly />
+                <p className="text-slate-600 text-xs">{rating}</p>
+            </div></td>
             <th>
                 <Link to={`/toy-details/${_id}`}><button className="btn  btn-sm bg-cyan-500 border-0 hover:bg-cyan-600">View Details</button></Link>
             </th>

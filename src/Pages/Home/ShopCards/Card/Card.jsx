@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 
 // eslint-disable-next-line react/prop-types
@@ -18,8 +21,9 @@ const Card = ({ product }) => {
                     <h2 className="card-title text-xl text-slate-600">{name}</h2>
                     <h3 className='font-bold text-2xl text-cyan-400'>${price}</h3>
                     <div className="card-actions flex justify-between items-center">
-                        <div className="">
-                            <p>{rating}</p>
+                        <div className="flex gap-2">
+                            <Rating style={{ maxWidth: 80 }} value={rating} readOnly />
+                            <p className="text-slate-600 text-xs">{rating}</p>
                         </div>
                         <Link to={`/toy-details/${_id}`}
                             data-aos="zoom-in"
